@@ -20,7 +20,9 @@
     
             <!-- table -->
             <div>
-                <h3>Current Train Schedule</h3>
+                <h3>Current Train Schedule   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Update a Train
+                  </button></h3>
             </div>
             <table class="table border">
                 <thead>
@@ -36,7 +38,45 @@
     
                 </tbody>
             </table>
-    
+
+            <!-- modal for updating -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Update Train Information</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="updateTrainName">Train Name</label>
+                                <input type="text" class="form-control" id="updateTrainName" placeholder="Le Train">
+                            </div>
+                            <div class="form-group">
+                                <label for="updateDestination">Destination</label>
+                                <input type="text" class="form-control" id="updateDestination" placeholder="Le Prague">
+                            </div>
+                            <div class="form-group">
+                                <label for="updateFirstTrainTime">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="updateFirstTrainTime" placeholder="0700">
+                            </div>
+                            <div class="form-group">
+                                <label for="updateFrequency">Frequency (min)</label>
+                                <input type="text" class="form-control" id="updateFrequency" placeholder="60">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" id="updateTrain" >Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             <!-- Form -->
             <div>
                 <h3>Add a Train</h3>
